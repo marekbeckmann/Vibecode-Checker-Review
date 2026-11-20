@@ -1,0 +1,7 @@
+<div class="card">
+  <h3><a href="/products/<%= p.id %>"><%= p.name %></a></h3>
+  <p class="meta"><%= p.category %> · <%= p.grain_size %></p>
+  <p class="price">€<%= p.price_per_ton.toFixed(2) %> / ton</p>
+  <p class="stock"><%= p.stock_tons %> tons in stock</p>
+  <button class="add-to-cart" data-id="<%= p.id %>" data-name="<%= p.name %>" data-price="<%= p.price_per_ton %>">Add to cart</button>
+</div>

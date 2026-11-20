@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+<h1><%= product.name %></h1>
+<p class="meta"><%= product.category %> · grain size <%= product.grain_size %></p>
+<p><%= product.description %></p>
+<p class="price">€<%= product.price_per_ton.toFixed(2) %> / ton</p>
+<p class="stock"><%= product.stock_tons %> tons in stock</p>
+<p>
+  <button class="add-to-cart" data-id="<%= product.id %>" data-name="<%= product.name %>" data-price="<%= product.price_per_ton %>">Add to cart</button>
+  <a class="button" href="/api/datasheets/download?file=<%= encodeURIComponent(product.datasheet_file) %>">Download datasheet</a>
+</p>
+<%- include('partials/footer') %>

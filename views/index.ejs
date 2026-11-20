@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+<h1>Gravel &amp; stone, delivered by the ton</h1>
+<p class="lead">Pick your variety, add it to the cart and we deliver to your site.</p>
+
+<div class="filters">
+  <a href="/" class="<%= activeCategory === '' ? 'active' : '' %>">All</a>
+  <% categories.forEach(function (c) { %>
+    <a href="/?category=<%= c %>" class="<%= activeCategory === c ? 'active' : '' %>"><%= c %></a>
+  <% }) %>
+</div>
+
+<div class="grid">
+  <% products.forEach(function (p) { %>
+    <%- include('partials/card', { p: p }) %>
+  <% }) %>
+</div>
+<%- include('partials/footer') %>

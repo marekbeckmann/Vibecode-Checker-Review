@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+<h1>Your cart</h1>
+<table id="cart-table" class="table">
+  <thead><tr><th>Product</th><th>Price / ton</th><th>Tons</th><th>Subtotal</th><th></th></tr></thead>
+  <tbody></tbody>
+</table>
+<p class="total">Total: €<span id="cart-total">0.00</span></p>
+<form id="checkout-form">
+  <label>Phone for delivery <input type="text" name="phone"></label>
+  <button type="submit">Place order</button>
+</form>
+<p id="checkout-message"></p>
+<%- include('partials/footer') %>
